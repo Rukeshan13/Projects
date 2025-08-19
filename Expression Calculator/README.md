@@ -1,43 +1,40 @@
-# 🏥 Hospital Patient Queue (Python)
+# 🧮 Expression Calculator (Python)
 
-A **Hospital Queue Management System** implemented in Python.  
-This project demonstrates how to manage **emergency** and **regular** patients using **priority queues** and **normal queues** while estimating patient wait times.  
+A Python-based **Expression Calculator** that evaluates arithmetic expressions using **stacks**.  
+This project demonstrates how to convert **infix expressions** (human-readable) into **postfix expressions** (machine-friendly) and then evaluate them.  
 
 ---
 
 ## 📌 Overview
-The system simulates a **hospital queue** where:
-- **Emergency patients** are given priority and served first.
-- **Regular patients** are managed in a **normal FIFO queue**.
-- The program displays an **estimated wait time** for each new patient based on average service time.
-- Patients are served in the correct order: **Emergency → Regular**.
+The Expression Calculator:
+- Accepts **infix expressions** (e.g., `3 + 4 * 2`).
+- Converts them into **postfix notation** using the **Shunting Yard Algorithm**.
+- Evaluates the postfix expression using a **stack-based evaluation method**.
+- Supports operators: `+`, `-`, `*`, `/`, `^`, and parentheses `()`.  
 
 ---
 
 ## ✨ Features
-- 🚑 **Add Patient** – Add emergency or regular patients to the queue.  
-- ⏱ **Estimated Wait Time** – Displays expected wait time when a patient is added.  
-- 🩺 **Serve Patient** – Processes patients in the correct priority order.  
-- 📋 **Queue Management** – Handles multiple patients efficiently.  
-- 🖥 **Menu-driven simulation** (optional for interactive usage).  
+- 🔄 **Infix to Postfix Conversion** – Ensures correct operator precedence and associativity.  
+- 🧾 **Expression Evaluation** – Computes the result from postfix expressions.  
+- ⚡ **Supports Multiple Operators** – Addition, subtraction, multiplication, division, exponentiation.  
+- 🧩 **Parentheses Handling** – Correctly handles nested expressions.  
+- 📋 **Stack-based implementation** – Demonstrates core **data structures**.  
 
 ---
 
 ## 🛠 Data Structures Used
-- **Priority Queue (`heapq`)**  
-  - Stores **emergency patients**.  
-  - Ensures they are always served before regular patients.  
+- **Stack (using Python `list`)**  
+  - Used in **infix → postfix conversion** to manage operators.  
+  - Used in **postfix evaluation** to compute results.  
 
-- **Normal Queue (`collections.deque`)**  
-  - Stores **regular patients** in **FIFO order**.  
-
-- **Custom `Patient` Class**  
-  - Stores patient details: `name`, `is_emergency`, `arrival_time`.  
+- **String Processing**  
+  - Tokenizes the input expression into numbers, operators, and parentheses.  
 
 ---
 
 ## ▶️ How It Runs
 1. Clone this repository:
-   git clone https://github.com/your-username/hospital-patient-queue.git
-   cd hospital-patient-queue
-
+   ```bash
+   git clone https://github.com/your-username/expression-calculator.git
+   cd expression-calculator
